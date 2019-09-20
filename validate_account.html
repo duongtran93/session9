@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let regexp = /^[_a-z0-9]{6,}$/;
+        function invalisAccount(str) {
+            if (regexp.test(str)) {
+                return true;
+            }
+            return false;
+        }
+
+        let account = "123abc_";
+        console.log(invalisAccount(account));
+
+        account = "_abc123";
+        console.log(invalisAccount(account));
+
+        account = "______";
+        console.log(invalisAccount(account));
+
+        account = "123456";
+        console.log(invalisAccount(account));
+
+        account = "abcdefg";
+        console.log(invalisAccount(account));
+
+        account = ".@";
+        console.log(invalisAccount(account));
+
+        account = "12345";
+        console.log(invalisAccount(account));
+
+        account = "1234_";
+        console.log(invalisAccount(account));
+
+        account = "abcde ";
+        console.log(invalisAccount(account));
+    </script>
+</body>
+</html>
